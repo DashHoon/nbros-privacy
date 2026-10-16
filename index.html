@@ -90,8 +90,6 @@
       <button type="button" class="lang-btn" data-lang-target="ko" aria-pressed="true">한국어</button>
       <button type="button" class="lang-btn" data-lang-target="en" aria-pressed="false">English</button>
     </div>
-    <p class="note lang-block" data-lang="ko">※ 시행일/연락처/회사 정보는 필요에 따라 수정하세요. (이 페이지는 GitHub Pages에서 정적으로 제공됩니다.)</p>
-    <p class="note lang-block" data-lang="en">※ Update the effective date, contact, and company details as needed. (This page is served statically via GitHub Pages.)</p>
   </header>
 
   <main>
@@ -106,6 +104,7 @@
         <a href="#s6-ko">6. 이용자의 권리와 행사 방법</a>
         <a href="#s7-ko">7. 개인정보보호를 위한 기술 및 관리적 대책</a>
         <a href="#s8-ko">8. 개인정보보호 담당자 및 책임자 안내</a>
+        <a href="#s9-ko">9. 희나꼬 지출기입장(HINAKKO Expense Manager) 앱</a>
       </section>
 
       <section class="card" id="s1-ko">
@@ -301,14 +300,61 @@
         <p>또한 개인정보에 관한 분쟁이 있는 경우에는 개인정보분쟁조정위원회 (전화: 1833-6972, <a href="http://www.kopico.go.kr/" target="_blank" rel="noreferrer noopener">http://www.kopico.go.kr/</a>)에 처리를 의뢰할 수 있습니다.</p>
       </section>
 
-      <section class="card">
-        <h2>배포 체크</h2>
+      <section class="card" id="s9-ko">
+        <h2>9. 희나꼬 지출기입장(HINAKKO Expense Manager) 앱</h2>
+        <p>이 항목은 희나꼬 지출기입장 앱(iOS·Android, 이하 ‘희나꼬’)에 적용되며, 위 1~8항보다 우선합니다. 희나꼬는 회원가입·로그인이 없고 회사 서버를 사용하지 않습니다. (추가일: 2026-10-16)</p>
+
+        <h3>9-1. 기기에만 저장되는 정보</h3>
         <ul>
-          <li><strong>앱 내 “설정/공지사항/고객센터” 실제 메뉴명</strong>이 다르면 문구를 서비스 UI에 맞게 바꿔줘.</li>
-          <li><strong>결제/광고/분석 SDK</strong>를 실제로 쓰고 있다면 “위탁/제3자 제공” 표기를 더 정확히 적는 게 좋아.</li>
-          <li><strong>만 18세 미만 법정대리인</strong> 언급과 <strong>만 14세 미만 미수집</strong> 문구가 함께 있으니, 서비스 정책에 맞는지 한 번만 점검해줘.</li>
+          <li>이용자가 입력한 지출(금액, 날짜, 카테고리, 결제수단, 메모), 카테고리·결제수단·빠른입력 목록과 설정은 이용자의 기기 안에만 저장됩니다. 회사는 이 정보를 수집하거나 열람할 수 없습니다.</li>
+          <li>앱을 삭제하면 기기에 저장된 정보도 함께 삭제됩니다.</li>
         </ul>
-        <p class="note">※ 위 체크는 “문서 정합성” 확인용이야(법률 자문은 아님).</p>
+
+        <h3>9-2. 백업(iCloud / Google Drive)</h3>
+        <ul>
+          <li>이용자가 백업을 실행하거나 자동 백업을 켠 경우에만, 지출 데이터가 이용자 본인의 iCloud(iOS) 또는 Google Drive의 앱 전용 숨김 폴더(Android)에 저장됩니다.</li>
+          <li>백업 파일은 이용자의 계정에 저장되며 회사 서버로 전송되지 않습니다. 회사는 백업 파일에 접근할 수 없습니다.</li>
+          <li>Google Drive 백업은 Google 계정 &gt; 데이터 및 개인정보 &gt; Drive의 앱 데이터에서, iCloud 백업은 기기의 iCloud 설정에서 삭제할 수 있습니다.</li>
+        </ul>
+
+        <h3>9-3. 문자 메시지(카드 문자 자동 입력, Android)</h3>
+        <ul>
+          <li>이용자가 앱의 설정에서 ‘카드 문자로 입력’을 켜고 문자 권한을 허용한 경우에만, 앱은 휴대전화에 새로 도착한 문자(SMS·MMS)를 읽어 카드 결제 문자인지 확인합니다. 기본값은 꺼짐입니다.</li>
+          <li>기능을 켜기 전에 받은 문자는 읽지 않습니다.</li>
+          <li>확인은 모두 기기 안에서 이루어집니다. 결제가 아닌 문자는 읽은 즉시 버리며, 문자 원문은 저장하거나 기록하지 않습니다.</li>
+          <li>카드 결제로 보이는 문자에서는 금액, 가맹점, 날짜, 할부 개월, 발신번호(숫자만)를 찾아 기기 안에 최대 7일 동안 보관합니다. 이 정보는 이용자가 지출로 저장하거나 무시하는 데에만 쓰이며, 백업 파일에 포함되지 않습니다.</li>
+          <li>문자 내용과 위 정보는 회사 서버나 제3자에게 전송되지 않습니다. 분석 도구에도 금액·가맹점·발신번호는 보내지 않습니다.</li>
+          <li>앱의 설정 &gt; 카드 문자 자동 입력에서 언제든지 끌 수 있고, 휴대전화 설정 &gt; 애플리케이션 &gt; 희나꼬 &gt; 권한에서 문자 권한을 회수할 수 있습니다.</li>
+        </ul>
+
+        <h3>9-4. 광고(Google AdMob)</h3>
+        <ul>
+          <li>무료 버전은 Google AdMob 광고를 표시합니다. 이를 위해 Google이 광고 ID(Android 광고 ID / iOS IDFA), 기기 정보, IP 주소로 추정한 대략적 위치, 광고 상호작용 정보를 수집할 수 있습니다.</li>
+          <li>유럽 등 동의가 필요한 지역에서는 처음 실행할 때 동의를 구하며, 앱의 설정 &gt; 개인정보 옵션에서 바꿀 수 있습니다. iOS에서는 앱 추적 투명성(ATT) 허용 여부에 따릅니다.</li>
+          <li>광고 ID는 기기 설정에서 재설정하거나 맞춤 광고를 끌 수 있습니다. Pro(광고 제거)를 구매하면 광고가 표시되지 않습니다.</li>
+          <li>Google의 처리 방식: <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noreferrer noopener">https://policies.google.com/technologies/partner-sites</a></li>
+        </ul>
+
+        <h3>9-5. 이용 통계(Google Firebase Analytics)</h3>
+        <ul>
+          <li>앱 개선을 위해 화면 진입, 지출 저장 같은 앱 사용 이벤트와 기기·앱 버전 정보, 앱 인스턴스 ID를 Google Firebase Analytics로 보냅니다.</li>
+          <li>금액은 구간(예: 1,000~5,000)으로만 보내며, 정확한 금액·메모·가맹점·문자 내용은 보내지 않습니다.</li>
+        </ul>
+
+        <h3>9-6. 결제</h3>
+        <ul>
+          <li>Pro 구매는 Google Play 결제 또는 Apple App Store를 통해 이루어집니다. 결제 수단 정보는 각 스토어가 처리하며 회사는 받지 않습니다. 앱은 구매 여부만 확인합니다.</li>
+        </ul>
+
+        <h3>9-7. 문의</h3>
+        <ul>
+          <li>앱의 ‘문의하기’로 메일을 보내면 이용자의 이메일 주소와 메일에 적은 내용, 앱이 함께 넣는 앱 버전·기기 모델·OS 버전을 받습니다. 문의 처리 외의 목적으로 쓰지 않으며, 처리 후 요청하면 삭제합니다.</li>
+        </ul>
+
+        <h3>9-8. 아동</h3>
+        <ul>
+          <li>희나꼬는 만 14세 미만 아동을 대상으로 하지 않으며, 아동의 개인정보를 알면서 수집하지 않습니다.</li>
+        </ul>
       </section>
     </div>
 
@@ -323,6 +369,7 @@
         <a href="#s6-en">6. Your Rights and How to Exercise Them</a>
         <a href="#s7-en">7. Safeguards for Personal Data</a>
         <a href="#s8-en">8. Privacy Officer and Contact</a>
+        <a href="#s9-en">9. HINAKKO Expense Manager App</a>
       </section>
 
       <section class="card" id="s1-en">
@@ -518,14 +565,61 @@
         <p>For disputes regarding personal data, you may also contact the Personal Information Dispute Mediation Committee: 1833-6972, <a href="http://www.kopico.go.kr/" target="_blank" rel="noreferrer noopener">http://www.kopico.go.kr/</a>.</p>
       </section>
 
-      <section class="card">
-        <h2>Pre-Release Checklist</h2>
+      <section class="card" id="s9-en">
+        <h2>9. HINAKKO Expense Manager App</h2>
+        <p>This section applies to the HINAKKO Expense Manager app (iOS and Android, “Hinakko”) and takes precedence over sections 1–8. Hinakko has no sign-up or login and does not use our servers. (Added: 2026-10-16)</p>
+
+        <h3>9-1. Data Stored Only on Your Device</h3>
         <ul>
-          <li>If in-app menu names differ (e.g., “Settings/Notices/Support”), align the wording with the actual UI.</li>
-          <li>If you actually use payment/ads/analytics SDKs, describe “delegation/third-party sharing” more specifically.</li>
-          <li>Check that your service policy matches both the “under 18 guardian” note and “no collection under 14.”</li>
+          <li>Expenses you enter (amount, date, category, payment method, memo), your category, payment method and quick-add lists, and your settings are stored only on your device. We cannot collect or view this data.</li>
+          <li>Deleting the app also deletes the data stored on your device.</li>
         </ul>
-        <p class="note">※ This checklist is for consistency checks only (not legal advice).</p>
+
+        <h3>9-2. Backup (iCloud / Google Drive)</h3>
+        <ul>
+          <li>Only when you run a backup or turn on auto backup, your expense data is saved to your own iCloud (iOS) or to a hidden app-only folder in your Google Drive (Android).</li>
+          <li>Backup files are stored in your account and are never sent to our servers. We cannot access them.</li>
+          <li>You can delete a Google Drive backup in Google Account &gt; Data &amp; privacy &gt; app data in Drive, and an iCloud backup in your device’s iCloud settings.</li>
+        </ul>
+
+        <h3>9-3. Text Messages (Card Text Auto-Entry, Android)</h3>
+        <ul>
+          <li>Only if you turn on “Add from card texts” in the app’s Settings and grant the SMS permission, the app reads new text messages (SMS/MMS) that arrive on your phone to check whether they are card payment texts. The feature is off by default.</li>
+          <li>Messages received before you turn the feature on are not read.</li>
+          <li>All checks happen on your device. Messages that are not payments are discarded right away, and message text is never stored or logged.</li>
+          <li>From card payment texts, the app extracts the amount, store, date, installment months and sender number (digits only) and keeps them on your device for up to 7 days. This information is used only so you can save or dismiss the expense, and it is not included in backup files.</li>
+          <li>Message content and the information above are never sent to our servers or to third parties. Analytics never receives amounts, stores or sender numbers.</li>
+          <li>You can turn the feature off at any time in Settings &gt; Card text auto-entry, and revoke the SMS permission in your phone’s Settings &gt; Apps &gt; HINAKKO Expense Manager &gt; Permissions.</li>
+        </ul>
+
+        <h3>9-4. Ads (Google AdMob)</h3>
+        <ul>
+          <li>The free version shows Google AdMob ads. For this, Google may collect the advertising ID (Android Advertising ID / iOS IDFA), device information, approximate location inferred from the IP address, and ad interaction data.</li>
+          <li>In regions where consent is required (such as the EEA), we ask for consent on first launch, and you can change it in the app’s Settings &gt; Privacy options. On iOS, this follows your App Tracking Transparency choice.</li>
+          <li>You can reset the advertising ID or opt out of personalized ads in your device settings. Ads are not shown after purchasing Pro (ad removal).</li>
+          <li>How Google uses data: <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noreferrer noopener">https://policies.google.com/technologies/partner-sites</a></li>
+        </ul>
+
+        <h3>9-5. Usage Analytics (Google Firebase Analytics)</h3>
+        <ul>
+          <li>To improve the app, we send app usage events (such as screen views and saving an expense), device and app version information, and an app instance ID to Google Firebase Analytics.</li>
+          <li>Amounts are sent only as ranges (e.g., 1,000–5,000). Exact amounts, memos, stores and message content are never sent.</li>
+        </ul>
+
+        <h3>9-6. Payments</h3>
+        <ul>
+          <li>Pro purchases are processed by Google Play Billing or the Apple App Store. Payment details are handled by each store and are not received by us. The app only checks whether you have purchased.</li>
+        </ul>
+
+        <h3>9-7. Support</h3>
+        <ul>
+          <li>If you email us via “Contact us” in the app, we receive your email address, what you write, and the app version, device model and OS version that the app adds. We use them only to handle your inquiry and delete them on request after it is resolved.</li>
+        </ul>
+
+        <h3>9-8. Children</h3>
+        <ul>
+          <li>Hinakko is not directed to children under 14, and we do not knowingly collect children’s personal data.</li>
+        </ul>
       </section>
     </div>
   </main>
