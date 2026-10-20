@@ -302,7 +302,7 @@
 
       <section class="card" id="s9-ko">
         <h2>9. 희나꼬 지출기입장(HINAKKO Expense Manager) 앱</h2>
-        <p>이 항목은 희나꼬 지출기입장 앱(iOS·Android, 이하 ‘희나꼬’)에 적용되며, 위 1~8항보다 우선합니다. 희나꼬는 회원가입·로그인이 없고 회사 서버를 사용하지 않습니다. (추가일: 2026-10-16)</p>
+        <p>이 항목은 희나꼬 지출기입장 앱(iOS·Android, 이하 ‘희나꼬’)에 적용되며, 위 1~8항보다 우선합니다. 희나꼬는 회원가입·로그인이 없고 회사 서버를 사용하지 않습니다. (추가일: 2026-10-16, 개정일: 2026-10-20)</p>
 
         <h3>9-1. 기기에만 저장되는 정보</h3>
         <ul>
@@ -319,10 +319,11 @@
 
         <h3>9-3. 문자 메시지(카드 문자 자동 입력, Android)</h3>
         <ul>
-          <li>이용자가 앱의 설정에서 ‘카드 문자로 입력’을 켜고 문자 권한을 허용한 경우에만, 앱은 휴대전화에 새로 도착한 문자(SMS·MMS)를 읽어 카드 결제 문자인지 확인합니다. 기본값은 꺼짐입니다.</li>
-          <li>기능을 켜기 전에 받은 문자는 읽지 않습니다.</li>
+          <li>이용자가 앱의 설정에서 ‘카드 문자로 입력’을 켜고 문자 권한을 허용한 경우에만, 앱은 휴대전화의 문자(SMS·MMS)를 읽어 카드 결제 문자인지 확인합니다. 기본값은 꺼짐입니다.</li>
+          <li>기능을 켤 때 최근 30일 동안 받은 문자를 한 번 읽어 카드 결제 문자를 찾고, 이후에는 새로 도착한 문자를 확인합니다. 그보다 이전에 받은 문자는 읽지 않습니다.</li>
           <li>확인은 모두 기기 안에서 이루어집니다. 결제가 아닌 문자는 읽은 즉시 버리며, 문자 원문은 저장하거나 기록하지 않습니다.</li>
-          <li>카드 결제로 보이는 문자에서는 금액, 가맹점, 날짜, 할부 개월, 발신번호(숫자만)를 찾아 기기 안에 최대 7일 동안 보관합니다. 이 정보는 이용자가 지출로 저장하거나 무시하는 데에만 쓰이며, 백업 파일에 포함되지 않습니다.</li>
+          <li>카드 결제로 보이는 문자에서는 금액, 가맹점, 날짜, 할부 개월, 발신번호(숫자만)를 찾아 기기 안에 최대 30일 동안 보관합니다. 이 정보는 이용자가 지출로 저장하거나 무시하는 데에만 쓰이며, 백업 파일에 포함되지 않습니다.</li>
+          <li>목록에서 ‘원문’을 누르면 그때 휴대전화 문자함에서 해당 문자를 읽어 화면에 보여 줍니다. 원문은 앱에 복사하거나 저장하지 않습니다.</li>
           <li>문자 내용과 위 정보는 회사 서버나 제3자에게 전송되지 않습니다. 분석 도구에도 금액·가맹점·발신번호는 보내지 않습니다.</li>
           <li>앱의 설정 &gt; 카드 문자 자동 입력에서 언제든지 끌 수 있고, 휴대전화 설정 &gt; 애플리케이션 &gt; 희나꼬 &gt; 권한에서 문자 권한을 회수할 수 있습니다.</li>
         </ul>
@@ -567,7 +568,7 @@
 
       <section class="card" id="s9-en">
         <h2>9. HINAKKO Expense Manager App</h2>
-        <p>This section applies to the HINAKKO Expense Manager app (iOS and Android, “Hinakko”) and takes precedence over sections 1–8. Hinakko has no sign-up or login and does not use our servers. (Added: 2026-10-16)</p>
+        <p>This section applies to the HINAKKO Expense Manager app (iOS and Android, “Hinakko”) and takes precedence over sections 1–8. Hinakko has no sign-up or login and does not use our servers. (Added: 2026-10-16, Updated: 2026-10-20)</p>
 
         <h3>9-1. Data Stored Only on Your Device</h3>
         <ul>
@@ -584,10 +585,11 @@
 
         <h3>9-3. Text Messages (Card Text Auto-Entry, Android)</h3>
         <ul>
-          <li>Only if you turn on “Add from card texts” in the app’s Settings and grant the SMS permission, the app reads new text messages (SMS/MMS) that arrive on your phone to check whether they are card payment texts. The feature is off by default.</li>
-          <li>Messages received before you turn the feature on are not read.</li>
+          <li>Only if you turn on “Add from card texts” in the app’s Settings and grant the SMS permission, the app reads text messages (SMS/MMS) on your phone to check whether they are card payment texts. The feature is off by default.</li>
+          <li>When you turn the feature on, the app reads messages received in the last 30 days once to find card payment texts, and after that it checks new messages as they arrive. Messages older than that are not read.</li>
           <li>All checks happen on your device. Messages that are not payments are discarded right away, and message text is never stored or logged.</li>
-          <li>From card payment texts, the app extracts the amount, store, date, installment months and sender number (digits only) and keeps them on your device for up to 7 days. This information is used only so you can save or dismiss the expense, and it is not included in backup files.</li>
+          <li>From card payment texts, the app extracts the amount, store, date, installment months and sender number (digits only) and keeps them on your device for up to 30 days. This information is used only so you can save or dismiss the expense, and it is not included in backup files.</li>
+          <li>When you tap “Text” in the list, the app reads that message from your phone’s inbox at that moment and shows it on screen. The original text is never copied into or stored by the app.</li>
           <li>Message content and the information above are never sent to our servers or to third parties. Analytics never receives amounts, stores or sender numbers.</li>
           <li>You can turn the feature off at any time in Settings &gt; Card text auto-entry, and revoke the SMS permission in your phone’s Settings &gt; Apps &gt; HINAKKO Expense Manager &gt; Permissions.</li>
         </ul>
